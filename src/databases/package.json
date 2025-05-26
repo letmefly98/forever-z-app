@@ -1,0 +1,21 @@
+{
+  "name": "databases",
+  "version": "0.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx src/init.ts"
+  },
+  "dependencies": {
+    "sequelize": "^6.37.5",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

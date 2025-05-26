@@ -1,0 +1,82 @@
+
+// 子元素之间增加空隙
+.items-gap(@px: 10px, @direction: right) {
+  & > :not(:last-child) {
+    margin-@{direction}: @px;
+  }
+}
+
+// 文本超出显示省略号（单行）
+.text-overflow() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// 文本超出显示省略号（多行）
+.multiline-text-overflow (@line) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line;
+}
+
+// 等宽分栏
+.column-row(@length: 2, @child: ~'.item', @column-gap: 0px, @row-gap: 0px) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * @column-gap);
+  margin-bottom: calc(-1 * @row-gap);
+
+  & > @{child} {
+    flex-grow: 1;
+    overflow: hidden;
+    margin-right: @column-gap;
+    margin-bottom: @row-gap;
+    flex-basis: calc(100% / @length);
+    max-width: calc(100% / @length - @column-gap);
+  }
+}
+
+// flex 布局且 @selector 元素体积扩张
+.flex-grow(@selector: ~'.grow') {
+  @{selector} {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  :not(@{selector}) {
+    flex-shrink: 0;
+  }
+}
+
+// 容器固定长宽比
+.aspect-ratio(@ratio: 1 / 1, @child: ~'.image') {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: calc(@ratio * 100%);
+  }
+
+  & > @{child}:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// 添加滚动
+.scroll-x() {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll-y() {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}

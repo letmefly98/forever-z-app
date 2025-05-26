@@ -1,0 +1,29 @@
+{
+  "name": "desktop",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "description": "永恒的财宝",
+  "author": {
+    "name": "forever-z-133"
+  },
+  "exports": {
+    "./vite-plugin.mjs": "./vite-plugin.mjs"
+  },
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "pnpm run --filter website dev",
+    "build": "electron-builder",
+    "test": "electron . --no-sandbox"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-devtools-installer": "^3.2.0",
+    "tree-kill": "^1.2.2",
+    "types": "workspace:^",
+    "typescript": "^5.7.2",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-static-copy": "^2.1.0"
+  }
+}

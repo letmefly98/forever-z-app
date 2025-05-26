@@ -1,0 +1,26 @@
+@import "common/styles/themes/light-theme.less";
+@import "common/styles/themes/dark-theme.less";
+@import "common/styles/el-rewrite.less";
+@import "common/styles/reset.less";
+
+html {
+  &,
+  &[data-theme="light"] {
+    .light-theme();
+  }
+
+  &[data-theme="dark"] {
+    .dark-theme();
+  }
+}
+
+html {
+  color: @global-text-color;
+  font-size: @global-font-size;
+  background-color: @body-bg-color;
+}
+
+html {
+  .el-rewrite-global();
+  .el-rewrite-components();
+}

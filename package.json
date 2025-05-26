@@ -1,0 +1,23 @@
+{
+  "name": "forever-z-app",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . --fix",
+    "dev": "pnpm run --filter website dev",
+    "dev:web": "pnpm run --filter website dev:web",
+    "dev:docs": "pnpm run --filter docs dev",
+    "build": "pnpm run --filter website build",
+    "build:web": "pnpm run --filter website build:web",
+    "build:docs": "pnpm run --filter docs build",
+    "test": "vitest run",
+    "test:dev": "vitest"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.11.0",
+    "eslint": "^9.24.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.5"
+  }
+}

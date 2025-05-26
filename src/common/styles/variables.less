@@ -1,0 +1,198 @@
+/**
+ * 可使用以下正则，快速替换变量
+ * 搜索：\s+--([^:]*): ?([^;]*);
+ * 替换：@$1: var(--$1);
+ */
+
+@global-title-text-color: var(--global-title-text-color);
+@global-sub-title-text-color: var(--global-sub-title-text-color);
+@global-font-size: var(--global-font-size);
+@global-font-size-small: var(--global-font-size-small);
+@global-font-size-large: var(--global-font-size-large);
+@global-border-radius: var(--global-border-radius);
+@global-horizontal-gap: var(--global-horizontal-gap);
+@global-vertical-gap: var(--global-vertical-gap);
+
+@primary-color: var(--primary-color);
+
+@global-border-radius: var(--global-border-radius);
+@container-border-radius: var(--container-border-radius);
+@global-font-size: var(--global-font-size);
+@global-bg-color: var(--global-bg-color);
+@global-text-color: var(--global-text-color);
+@global-tips-text-color: var(--global-tips-text-color);
+@global-disabled-text-color: var(--global-disabled-text-color);
+@global-border-color: var(--global-border-color);
+
+@body-bg-color: var(--body-bg-color);
+@header-bg-color: var(--header-bg-color);
+@container-bg-color: var(--container-bg-color);
+@content-bg-color: var(--content-bg-color);
+@foot-bg-color: var(--foot-bg-color);
+@active-bg-color: var(--active-bg-color);
+@mask-bg-color: var(--mask-bg-color);
+
+@button-padding: var(--button-padding);
+@button-padding-small: var(--button-padding-small);
+@button-padding-large: var(--button-padding-large);
+@button-height: var(--button-height);
+@button-height-small: var(--button-height-small);
+@button-default-bg-color: var(--button-default-bg-color);
+@button-default-text-color: var(--button-default-text-color);
+@button-default-border-color: var(--button-default-border-color);
+@button-default-hover-bg-color: var(--button-default-hover-bg-color);
+@button-default-hover-text-color: var(--button-default-hover-text-color);
+@button-default-hover-border-color: var(--button-default-hover-border-color);
+@button-default-disabled-bg-color: var(--button-default-disabled-bg-color);
+@button-default-disabled-text-color: var(--button-default-disabled-text-color);
+@button-default-disabled-border-color: var(--button-default-disabled-border-color);
+@button-primary-bg-color: var(--button-primary-bg-color);
+@button-primary-text-color: var(--button-primary-text-color);
+@button-primary-border-color: var(--button-primary-border-color);
+@button-primary-hover-bg-color: var(--button-primary-hover-bg-color);
+@button-primary-hover-text-color: var(--button-primary-hover-text-color);
+@button-primary-hover-border-color: var(--button-primary-hover-border-color);
+@button-primary-disabled-bg-color: var(--button-primary-disabled-bg-color);
+@button-primary-disabled-text-color: var(--button-primary-disabled-text-color);
+@button-primary-disabled-border-color: var(--button-primary-disabled-border-color);
+@button-link-padding: var(--button-link-padding);
+@button-link-text-color: var(--button-link-text-color);
+@button-link-hover-text-color: var(--button-link-hover-text-color);
+@button-link-disabled-text-color: var(--button-link-disabled-text-color);
+
+@radio-group-bg-color: var(--radio-group-bg-color);
+@radio-group-items-gap: var(--radio-group-items-gap);
+@radio-group-vertical-gap: var(--radio-group-vertical-gap);
+@radio-group-horizontal-gap: var(--radio-group-horizontal-gap);
+@radio-group-items-border-radius: var(--radio-group-items-border-radius);
+@radio-button-height: var(--radio-button-height);
+@radio-button-padding: var(--radio-button-height);
+@radio-button-bg-color: var(--radio-button-bg-color);
+@radio-button-text-color: var(--radio-button-text-color);
+@radio-button-border-color: var(--radio-button-border-color);
+@radio-button-hover-bg-color: var(--radio-button-hover-bg-color);
+@radio-button-hover-text-color: var(--radio-button-hover-text-color);
+@radio-button-hover-border-color: var(--radio-button-hover-border-color);
+@radio-button-active-bg-color: var(--radio-button-active-bg-color);
+@radio-button-active-text-color: var(--radio-button-active-text-color);
+@radio-button-active-font-weight: var(--radio-button-active-font-weight);
+@radio-button-active-border-color: var(--radio-button-active-border-color);
+
+@table-padding: var(--table-padding);
+@table-container-border-color: var(--table-container-border-color);
+@table-header-padding: var(--table-header-padding);
+@table-header-font-size: var(--table-header-font-size);
+@table-header-font-weight: var(--table-header-font-weight);
+@table-header-bg-color: var(--table-header-bg-color);
+@table-header-text-color: var(--table-header-text-color);
+@table-header-border-color: var(--table-header-border-color);
+@table-header-border-radius: var(--table-header-border-radius);
+@table-body-bg-color: var(--table-body-bg-color);
+@table-body-text-color: var(--table-body-text-color);
+@table-body-border-color: var(--table-body-border-color);
+@table-body-last-border-color: var(--table-body-last-border-color);
+@table-striped-bg-color: var(--table-striped-bg-color);
+@table-hover-bg-color: var(--table-hover-bg-color);
+
+@form-label-text-align: var(--form-label-text-align);
+@form-label-text-color: var(--form-label-text-color);
+@form-label-font-weight: var(--form-label-font-weight);
+@form-row-gap: var(--form-row-gap);
+
+@input-padding: var(--input-padding);
+@input-height: var(--input-height);
+@input-height-small: var(--input-height-small);
+@input-bg-color: var(--input-bg-color);
+@input-text-color: var(--input-text-color);
+@input-border-color: var(--input-border-color);
+@input-hover-border-color: var(--input-hover-border-color);
+@input-placeholder-text-color: var(--input-placeholder-text-color);
+
+@input-date-cell-border-radius: var(--input-date-cell-border-radius);
+@input-date-cell-range-bg-color: var(--input-date-cell-range-bg-color);
+@input-date-cell-range-hover-bg-color: var(--input-date-cell-range-hover-bg-color);
+@input-date-cell-range-height: var(--input-date-cell-range-height);
+@input-date-cell-range-gap: var(--input-date-cell-range-gap);
+
+@tooltip-bg-color: var(--tooltip-bg-color);
+@tooltip-text-color: var(--tooltip-text-color);
+@tooltip-border-color: var(--tooltip-border-color);
+
+@overlay-vertical-padding: var(--overlay-vertical-padding);
+@overlay-bg-color: var(--overlay-bg-color);
+@overlay-border-color: var(--overlay-border-color);
+@overlay-border-width: var(--overlay-border-width);
+@overlay-arrow-display: var(--overlay-arrow-display);
+@overlay-offset-top: var(--overlay-offset-top);
+
+@overlay-item-height: var(--overlay-item-height);
+@overlay-item-padding: var(--overlay-item-padding);
+@overlay-item-vertical-gap: var(--overlay-item-vertical-gap);
+@overlay-item-horizontal-gap: var(--overlay-item-horizontal-gap);
+@overlay-item-border-radius: var(--overlay-item-border-radius);
+@overlay-item-bg-color: var(--overlay-item-bg-color);
+@overlay-item-text-color: var(--overlay-item-text-color);
+@overlay-item-hover-bg-color: var(--overlay-item-hover-bg-color);
+@overlay-item-hover-text-color: var(--overlay-item-hover-text-color);
+@overlay-item-active-font-weight: var(--overlay-item-active-font-weight);
+
+@dialog-header-padding: var(--dialog-header-padding);
+@dialog-header-height: var(--dialog-header-height);
+@dialog-header-font-size: var(--dialog-header-font-size);
+@dialog-header-font-weight: var(--dialog-header-font-weight);
+@dialog-header-text-align: var(--dialog-header-text-align);
+@dialog-header-bg-color: var(--dialog-header-bg-color);
+@dialog-header-text-color: var(--dialog-header-text-color);
+@dialog-header-border-color: var(--dialog-header-border-color);
+@dialog-close-icon-size: var(--dialog-close-icon-size);
+@dialog-body-padding: var(--dialog-body-padding);
+@dialog-body-bg-color: var(--dialog-body-bg-color);
+@dialog-footer-border-color: var(--dialog-footer-border-color);
+
+@tag-height: var(--tag-height);
+@tag-padding: var(--tag-padding);
+@tag-font-size: var(--tag-font-size);
+@tag-border-radius: var(--tag-border-radius);
+@tag-bg-color: var(--tag-bg-color);
+@tag-text-color: var(--tag-text-color);
+@tag-border-color: var(--tag-border-color);
+@tag-close-bg-color: var(--tag-close-bg-color);
+@tag-close-text-color: var(--tag-close-text-color);
+@tag-close-border-color: var(--tag-close-border-color);
+@tag-close-hover-bg-color: var(--tag-close-hover-bg-color);
+@tag-close-hover-text-color: var(--tag-close-hover-text-color);
+@tag-close-hover-border-color: var(--tag-close-hover-border-color);
+@tag-close-size: var(--tag-close-size);
+
+@breadcrumb-text-color: var(--breadcrumb-text-color);
+@breadcrumb-symbol-color: var(--breadcrumb-symbol-color);
+@breadcrumb-link-text-color: var(--breadcrumb-link-text-color);
+@breadcrumb-link-hover-text-color: var(--breadcrumb-link-hover-text-color);
+@breadcrumb-active-text-color: var(--breadcrumb-active-text-color);
+@breadcrumb-active-font-weight: var(--breadcrumb-active-font-weight);
+
+@menu-sub-item-height: var(--menu-sub-item-height);
+@menu-item-height: var(--menu-item-height);
+@menu-item-hover-bg-color: var(--menu-item-hover-bg-color);
+@menu-item-active-bg-color: var(--menu-item-active-bg-color);
+@menu-item-gap: var(--menu-item-gap);
+@menu-item-margin: var(--menu-item-margin);
+@menu-item-border-radius: var(--menu-item-border-radius);
+
+@pager-select-width: var(--pager-select-width);
+@pager-direction-bg-color: var(--pager-direction-bg-color);
+@pager-direction-hover-bg-color: var(--pager-direction-hover-bg-color);
+@pager-number-gap: var(--pager-number-gap);
+@pager-number-bg-color: var(--pager-number-bg-color);
+@pager-number-text-color: var(--pager-number-text-color);
+@pager-number-border-color: var(--pager-number-border-color);
+@pager-number-hover-bg-color: var(--pager-number-hover-bg-color);
+@pager-number-hover-text-color: var(--pager-number-hover-text-color);
+@pager-number-hover-border-color: var(--pager-number-hover-border-color);
+@pager-number-active-bg-color: var(--pager-number-active-bg-color);
+@pager-number-active-text-color: var(--pager-number-active-text-color);
+@pager-number-active-border-color: var(--pager-number-active-border-color);
+@pager-number-active-font-weight: var(--pager-number-active-font-weight);
+@pager-jump-bg-color: var(--pager-jump-bg-color);
+@pager-jump-vertical-padding: var(--pager-jump-vertical-padding);
+@pager-jump-horizontal-padding: var(--pager-jump-horizontal-padding);

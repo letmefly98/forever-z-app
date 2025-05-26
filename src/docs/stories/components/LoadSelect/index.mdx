@@ -1,0 +1,19 @@
+import { Title, Primary, Meta, Stories, Controls } from '@storybook/blocks';
+
+import * as LoadSelectStories from './index.stories';
+
+<Meta of={LoadSelectStories} />
+
+<Title>LoadSelect</Title>
+
+自带分页请求的 `el-select`。
+
+数据量大时通常是用 [Virtualized Select](https://element-plus.org/zh-CN/component/tree-v2.html) 虚拟列表，但数据请求量也大，所以也可采用本案例分页请求。
+
+<Primary of={LoadSelectStories} />
+
+## InfoList Controls
+
+<Controls />
+
+<Stories of={LoadSelectStories} />

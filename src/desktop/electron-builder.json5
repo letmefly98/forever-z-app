@@ -1,0 +1,44 @@
+/**
+ * @see https://www.electron.build/configuration/configuration
+ */
+{
+  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
+  "appId": "com.forever-z.app",
+  "asar": false,
+  "productName": "forever-z",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "./dist",
+    "../website/dist"
+  ],
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectory": true
+  },
+  "mac": {
+    "target": [
+      "dmg"
+    ],
+    "artifactName": "${productName}-Mac-${version}-Installer.${ext}"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "dist/favicon.png",
+    "artifactName": "${productName}-Windows-${version}-Setup.${ext}"
+  },
+  "linux": {
+    "target": [
+      "AppImage"
+    ],
+    "icon": "dist/favicon.png",
+    "artifactName": "${productName}-Linux-${version}.${ext}"
+  }
+}

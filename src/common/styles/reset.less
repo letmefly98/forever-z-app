@@ -1,0 +1,66 @@
+@import "./variables.less";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, \\5fae\8f6f\96c5\9ed1, Arial,
+  sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+ul li {
+  list-style: none;
+}
+
+pre {
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, \\5fae\8f6f\96c5\9ed1, Arial,
+  sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px; /*对垂直流动条有效*/
+  height: 6px; /*对水平流动条有效*/
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: rgba(171, 190, 217, 0.5);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #32435A;
+}
+
+a:focus,
+:focus-visible {
+  outline: 1px solid @primary-color;
+  outline-offset: 1px;
+}
