@@ -23,6 +23,8 @@ describe('utils/codeName.ts', () => {
   it('convertCodeName', async () => {
     expect(convertCodeName('snisadd432un')).toBe('SNIS-432')
     expect(convertCodeName('102017_001')).toBe('102017-001')
+    expect(convertCodeName('ABC-123')).toBe('ABC-123')
+    expect(convertCodeName('ABC -123')).toBe('ABC-123')
   })
 
   it('removeCodeNamePart', async () => {

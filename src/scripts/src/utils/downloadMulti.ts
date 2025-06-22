@@ -15,7 +15,7 @@ const browser = await puppeteer.launch({
     height: 800,
   },
   args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  timeout: 60000,
+  timeout: 300000,
 })
 
 const page = await browser.newPage()
@@ -62,7 +62,7 @@ async function downloadMulti(urls: string[], output: string) {
   return new Promise((resolve, reject) => {
     resolveTrigger = async (uri, buffer) => {
       const targetFile = path.join(output, path.basename(uri))
-      fs.writeFileSync(targetFile, buffer, 'utf8')
+      if (!fs.existsSync(targetFile)) fs.writeFileSync(targetFile, buffer)
       console.timeEnd(uri)
       if (--restCount <= 0) {
         resolve(undefined)

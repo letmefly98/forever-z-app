@@ -28,7 +28,7 @@ export function convertCodeName(name: string): string {
   if (!name) return ''
   const [p, n, e] = name.split(codeNameDivideReg)
   if (!n) return p
-  const prev = p.toLocaleUpperCase()
+  const prev = p.trim().toLocaleUpperCase()
   const temp = e && isNumberString(e) ? [n, e].join('_') : n
   const next = temp.replace(codeNameNumberReg, (_, a, b, _c, _d, e, f) => {
     const prefix = a ? a.toLocaleUpperCase() : ''
