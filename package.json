@@ -3,21 +3,31 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
+  "workspaces": [
+    "src/common",
+    "src/databases",
+    "src/desktop",
+    "src/website",
+    "src/docs",
+    "src/scripts",
+    "src/types"
+  ],
   "scripts": {
     "lint": "eslint . --fix",
-    "dev": "pnpm run --filter website dev",
-    "dev:web": "pnpm run --filter website dev:web",
-    "dev:docs": "pnpm run --filter docs dev",
-    "build": "pnpm run --filter website build",
-    "build:web": "pnpm run --filter website build:web",
-    "build:docs": "pnpm run --filter docs build",
+    "dev": "npm run --workspace=website dev",
+    "dev:web": "npm run --workspace=website dev:web",
+    "dev:docs": "npm run --workspace=docs dev",
+    "build": "npm run --workspace=website build",
+    "build:web": "npm run --workspace=website build:web",
+    "build:docs": "npm run --workspace=docs build",
     "test": "vitest run",
     "test:dev": "vitest"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.11.0",
-    "eslint": "^9.24.0",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.5"
+    "@antfu/eslint-config": "^6.7.3",
+    "@types/node": "^25.0.3",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
   }
 }

@@ -2,10 +2,15 @@
   "compilerOptions": {
     "composite": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "baseUrl": "./",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "paths": {
       "@/*": ["./src/*"]
-    }
-  }
+    },
+    "types": ["vite/client"]
+  },
+  "include": [
+    "./src/**/*"
+  ]
 }

@@ -22,6 +22,7 @@ defineSlots<{
   header: () => any
   footer: () => any
   left: () => any
+  right: () => any
 }>()
 
 const layoutStyle = computed(() => {

@@ -17,11 +17,12 @@ const meta: Meta<typeof BaseLayout> = {
     footerContainLeft: { description: '页末是否包含左侧' },
     footerContainRight: { description: '页末是否包含右侧' },
   },
-}
+} satisfies Meta<typeof BaseLayout>
+type Story = StoryObj<typeof meta>
 export default meta
 
 // 案例模板
-function BaseLayoutExampleTemplate(comps: string[]): StoryObj<typeof BaseLayout> {
+function BaseLayoutExampleTemplate(comps: string[]): Story {
   const components = { header: Header, default: Content, left: Left, right: Right, footer: Footer }
   return {
     render: args => ({
@@ -51,7 +52,7 @@ function BaseLayoutExampleTemplate(comps: string[]): StoryObj<typeof BaseLayout>
 }
 
 // 常规使用
-export const Basic: StoryObj<typeof BaseLayout> = {
+export const Basic: Story = {
   args: {
     headerContainLeft: true,
     headerContainRight: true,

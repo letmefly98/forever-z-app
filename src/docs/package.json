@@ -1,27 +1,23 @@
 {
   "name": "docs",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build"
   },
   "devDependencies": {
-    "@element-plus/icons-vue": "2.3.1",
-    "@storybook/addon-essentials": "^8.4.5",
-    "@storybook/addon-interactions": "^8.4.5",
-    "@storybook/addon-links": "^8.4.5",
-    "@storybook/blocks": "^8.4.5",
-    "@storybook/test": "^8.4.5",
-    "@storybook/vue3": "^8.4.5",
-    "@storybook/vue3-vite": "^8.4.5",
-    "common": "workspace:^",
-    "element-plus": "^2.8.8",
-    "lodash-es": "^4.17.21",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "storybook": "^8.4.5",
-    "unplugin-auto-import": "^0.18.5",
-    "unplugin-vue-components": "^0.27.4",
-    "vue": "3.5.13"
+    "@element-plus/icons-vue": "2.3.2",
+    "@storybook/addon-docs": "^10.1.11",
+    "@storybook/vue3": "^10.1.11",
+    "@storybook/vue3-vite": "^10.1.11",
+    "element-plus": "^2.13.0",
+    "lodash-es": "^4.17.22",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "storybook": "^10.1.11",
+    "unplugin-auto-import": "^20.3.0",
+    "unplugin-vue-components": "^30.0.0",
+    "vue": "3.5.26"
   }
 }

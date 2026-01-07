@@ -37,8 +37,8 @@ interface LoadSelectAjaxResult {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  modelValue: '',
-  ajax: () => Promise.resolve({ total: 0, records: [] as any[] }),
+  // modelValue: '',
+  // ajax: () => Promise.resolve({ total: 0, records: [] as any[] }),
   valueName: '',
   threshold: 50,
   defaultPageSize: 10,

@@ -15,11 +15,12 @@ const meta: Meta<typeof EditItem> = {
     onStart: {},
     onCancel: {},
   },
-}
+} satisfies Meta<typeof EditItem>
+type Story = StoryObj<typeof meta>
 export default meta
 
 // 常规使用
-export const Basic: StoryObj<typeof EditItem> = {
+export const Basic: Story = {
   args: {
     modelValue: 'A',
     autoClose: true,
@@ -35,7 +36,7 @@ export const Basic: StoryObj<typeof EditItem> = {
 }
 
 // 异步确认
-export const WithAjax: StoryObj<typeof EditItem> = {
+export const WithAjax: Story = {
   args: {
     modelValue: 'A',
     autoClose: false,

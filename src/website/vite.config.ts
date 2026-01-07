@@ -1,12 +1,16 @@
-import type { APP_PROJECT } from 'types/website.d.ts'
-import { join } from 'node:path'
+import type { APP_PROJECT } from '../types/website.d.ts'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import vue from '@vitejs/plugin-vue'
-import getViteElectronPlugin from 'desktop/vite-plugin.mjs'
 import AutoImport from 'unplugin-auto-import/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig, loadEnv } from 'vite'
+import getViteElectronPlugin from '../desktop/vite-plugin.mjs'
 
+// ES 模块中获取当前目录的正确方式
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 const thisDir = __dirname
 
 export default defineConfig(({ command, mode }) => {
@@ -40,6 +44,9 @@ export default defineConfig(({ command, mode }) => {
     resolve: {
       alias: {
         '@': join(thisDir, 'src'),
+        'common': join(thisDir, '../common'),
+        'types': join(thisDir, '../types'),
+        'desktop': join(thisDir, '../desktop'),
       },
     },
     css: {
@@ -47,7 +54,7 @@ export default defineConfig(({ command, mode }) => {
         less: {
           javascriptEnabled: true,
           modifyVars: {
-            hack: 'true; @import (reference) "common/styles/variables.less";\n@import (reference) "common/styles/mixins.less";\n',
+            hack: `true; @import (reference) "${join(thisDir, '../common/styles/variables.less')}"; @import (reference) "${join(thisDir, '../common/styles/mixins.less')}";`,
           },
         },
       },

@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { userEvent, within } from '@storybook/test'
 import { RightClickMenu } from 'common'
 
 const meta: Meta<typeof RightClickMenu> = {
@@ -19,7 +18,6 @@ const meta: Meta<typeof RightClickMenu> = {
     clickable: {
       description: '同时支持左键点击',
     },
-    // @ts-expect-error: Unreachable code error
     onCommand: {},
   },
 }
@@ -30,9 +28,8 @@ export const Basic: StoryObj<typeof RightClickMenu> = {
   args: {
     menus: ['Action 1', 'Action 2'],
   },
-  play: async ({ canvasElement }) => {
-    const ctx = within(canvasElement)
-    const el = await ctx.findByRole('button')
+  play: async ({ canvas, userEvent }) => {
+    const el = await canvas.findByRole('button')
     userEvent.pointer({ keys: '[MouseRight]', target: el })
   },
 }

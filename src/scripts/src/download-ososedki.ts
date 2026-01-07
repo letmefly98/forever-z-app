@@ -20,4 +20,3 @@ export const urls = Array.from({ length: total }, (_, i) => {
 })
 
 await downloadMulti(urls, output)
-
